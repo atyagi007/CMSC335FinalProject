@@ -1,0 +1,231 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+/* for own ref -  first home page - index file*/
+.home-page h1 {
+    text-align: center;
+    margin: 60px 0 20px;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+.home-page form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.home-page form input[type="text"],
+.home-page form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.home-page form button {
+    width: 100%;
+    padding: 10px;
+    background: #2ecc71;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.home-page form button:hover {
+    background: #27ae60;
+}
+
+/* when search page is loaded */
+.search-page header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.search-page header a {
+    text-decoration: none;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.search-page header a:hover {
+    text-decoration: underline;
+}
+
+
+.search-page .results-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+.search-page .result-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.search-page .result-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.search-page .result-card .summary {
+    margin: 10px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.search-page .result-card h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+.search-page .highlights-list {
+    list-style: disc inside;
+    margin: 10px 0 20px 0;
+    padding: 0;
+}
+
+.search-page .highlights-list li {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.search-page .excerpt {
+    margin: 20px 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+.search-page .result-links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-page .result-links a {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-page .result-links a:hover {
+    text-decoration: underline;
+}
+
+.search-page .save-form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-page .save-form button:hover {
+    background: #2980b9;
+}
+
+/* for the favorites page - for own ref comment */
+.favorites-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.favorites-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #2c3e50; 
+}
+
+
+.favorites-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    overflow: hidden; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.favorites-table thead {
+    background: #3498db; 
+    color: #fff;
+}
+
+.favorites-table th, .favorites-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+}
+
+.favorites-table th {
+    font-weight: bold;
+}
+
+.favorites-table tbody tr:hover {
+    background: #f2f9fc; 
+}
+
+.favorites-table a {
+    color: #e74c3c; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.favorites-table a:hover {
+    text-decoration: underline;
+}
+
+
+.favorites-page form button {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.favorites-page form button:hover {
+    background: #d35400;
+}
+
+.favorites-page a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.favorites-page a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= result.title %> - Detail</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1><%= result.title %></h1>
+    <% if(result.author) { %><p><strong>Author:</strong> <%= result.author %></p><% } %>
+    <% if(result.publishedDate) { %><p><strong>Published Date:</strong> <%= result.publishedDate %></p><% } %>
+
+    <% if (result.summary) { %>
+        <p><strong>Summary:</strong> <%= result.summary %></p>
+    <% } %>
+
+    <% if (result.highlights && result.highlights.length > 0) { %>
+        <h3>Key Highlights:</h3>
+        <ul>
+        <% result.highlights.forEach(h => { %>
+            <li><%= h %></li>
+        <% }) %>
+        </ul>
+    <% } %>
+
+    <p><strong>Full Text:</strong></p>
+    <p><%= result.text %></p>
+
+    <p><a href="<%= result.url %>" target="_blank">Read Full Article</a></p>
+
+    <form action="/save" method="POST">
+        <input type="hidden" name="name" value="<%= result.title %>">
+        <input type="hidden" name="address" value="<%= result.url %>">
+        <button type="submit">Save to Favorites</button>
+    </form>
+
+    <a href="/favorites">View Favorites</a> | <a href="javascript:history.back()">Back</a>
+</body>
+</html>

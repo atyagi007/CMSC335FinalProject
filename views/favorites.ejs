@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="favorites-page">
+    <h1>Your Favorite Hidden Gems</h1>
+
+    <% if (favorites && favorites.length > 0) { %>
+        <table class="favorites-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address (Link)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% favorites.forEach(fav => { %>
+                    <tr>
+                        <td><%= fav.name %></td>
+                        <td><a href="<%= fav.address %>" target="_blank"><%= fav.address %></a></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No favorites saved yet.</p>
+    <% } %>
+
+    <form action="/reset" method="POST" style="margin-top:20px;">
+        <button type="submit">Reset Favorites</button>
+    </form>
+    <a href="/" style="display:inline-block; margin-top:20px;">Back to Home</a>
+</body>
+</html>

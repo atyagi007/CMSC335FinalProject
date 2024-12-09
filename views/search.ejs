@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results - <%= city %> - <%= category %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="search-page">
+    <header>
+        <h1>Hidden <%= category %> in <%= city %></h1>
+        <a href="/">Back to Home</a>
+    </header>
+
+    <div class="results-container">
+        <% results.forEach((result) => { %>
+            <div class="result-card">
+                <h2><%= result.title %></h2>
+                <% if (result.summary) { %>
+                    <p class="summary"><strong>Summary:</strong> <%= result.summary %></p>
+                <% } %>
+                <% if (result.highlights && result.highlights.length > 0) { %>
+                    <h3>Key Highlights:</h3>
+                    <ul class="highlights-list">
+                        <% result.highlights.forEach(h => { %>
+                            <li><%= h %></li>
+                        <% }) %>
+                    </ul>
+                <% } %>
+                <p class="excerpt"><%= result.text ? result.text.substring(0, 300) + '...' : '' %></p>
+                <div class="result-links">
+                    <a class="external-link" href="<%= result.url %>" target="_blank">Read More (External)</a>
+                    
+                </div>
+                <form action="/save" method="POST" class="save-form">
+                    <input type="hidden" name="name" value="<%= result.title %>">
+                    <input type="hidden" name="address" value="<%= result.url %>">
+                    <button type="submit">Save to Favorites</button>
+                </form>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

@@ -22,6 +22,24 @@ body {
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+.favorites-button {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-button:hover {
+    background-color: #2980b9;
+}
+
 
 .home-page form input[type="text"],
 .home-page form select {
